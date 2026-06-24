@@ -1,0 +1,86 @@
+.header {
+  background-color: #1a8720;  /* vert foncé */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ffffff;  /* or */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Liens navbar */
+nav a {
+  color: #FAF3E0;  /* crème */
+  text-decoration: none;
+  margin-left: 1.3rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #090805;  /* or au survol et actif */
+  font-weight: bold;
+}
+
+/* Burger caché par défaut sur desktop */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #efefef;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Nav mobile cachée par défaut */
+.nav-mobile {
+  display: none;
+}
+
+/* ---- TABLETTE ---- */
+@media (max-width: 900px) {
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 600px) {
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  /* Burger visible sur mobile */
+  .burger {
+    display: block;
+  }
+
+  /* Navbar desktop cachée sur mobile */
+  .nav-desktop {
+    display: none;
+  }
+
+  /* Navbar mobile visible quand isMenuOpen = true */
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1a8720;
+    padding: 1rem 0;
+  }
+
+  .nav-mobile a {
+    margin: 0.5rem 1rem;
+    font-size: 1.1rem;
+  }
+}

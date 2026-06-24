@@ -1,0 +1,9 @@
+footer{
+  background-color: #2c8033;  /* vert foncé */
+  display: flex;
+   padding: 30px;
+   justify-content: center;
+   color: white;
+   font-size: 2rem;
+
+}

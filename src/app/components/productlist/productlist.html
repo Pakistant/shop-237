@@ -1,0 +1,16 @@
+
+<div class="product-list">
+  @for (product of list; track product) {
+    <div class="product">
+      <img class="product-image" [src]="product.image" alt="image">
+      <div class="info">
+        <div class="infoZ">
+          <div class="title">{{ product.titre }}</div>
+          <div class="price">prix: {{ product.price }} FCFA</div>
+        </div>
+        <a href="#" class="btn">Commander</a>
+      </div>
+    </div>
+  }
+</div>
+

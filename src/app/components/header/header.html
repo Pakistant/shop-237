@@ -1,0 +1,32 @@
+<header class="header">
+
+  <div class="logo">SHOP-237</div>
+
+  <button class="burger" (click)="toggleMenu()">☰</button>
+
+  <!-- Navbar desktop -->
+  <nav class="nav-desktop">
+    @for (link of links; track link.label) {
+      <a [href]="link.href"
+         [class.active]="activeLink === link.label"
+         (click)="setActive(link.label)">
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+
+  <!-- Navbar mobile -->
+  @if (isMenuOpen) {
+    <nav class="nav-mobile">
+      @for (link of links; track link.label) {
+        <a [href]="link.href"
+           [class.active]="activeLink === link.label"
+           (click)="setActive(link.label)">
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+  }
+
+</header>
+
