@@ -14,7 +14,7 @@ export class Header {
   { label: 'Contact',      href: '#contact' },
 ];
 
-  activeLink = 'Accueil';
+  activeLink = 'Home';
 isMenuOpen = false;
 
 toggleMenu() {
