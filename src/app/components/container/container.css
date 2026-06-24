@@ -3,7 +3,9 @@
    flex-wrap: wrap;
    align-items: center;
    justify-content: center;
+   grid-template-columns: repeat(4, 1fr);
   
 }
+
 
 
