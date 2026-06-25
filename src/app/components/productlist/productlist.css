@@ -3,9 +3,20 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
+
   justify-items: center;
   width: 100%;
-  
+
+}
+.categorie{
+
+  background-color: #1a8720;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 10px;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .product {
@@ -16,7 +27,7 @@
   max-width: 100%;
   min-width: 0;
   padding: 10px;
-  margin: 0;
+  margin: 0px;
   border: 1px solid #ccc;
   background-color: #fffdf8;
   border-radius: 1rem;
@@ -59,15 +70,36 @@
   .product-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+    padding: 0px;
+    margin: 0px;
   }
 }
 
 @media (max-width: 480px) {
   .product-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .categorie{
+    font-size: 1rem;
   }
 
   .product {
     max-width: none;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .price {
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+
+  .btn {
+    padding: 0.6rem 0.9rem;
   }
 }
