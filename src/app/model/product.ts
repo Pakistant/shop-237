@@ -1,6 +1,8 @@
 export interface product{
-  id:Number
+  id:number
   titre:string
-  price:Number
+  price:number
+  createdAt: Date;
+  categories: string[];
   image:string
 }
