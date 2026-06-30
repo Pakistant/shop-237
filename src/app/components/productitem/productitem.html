@@ -1,1 +1,32 @@
-<p>productitem works!</p>
+
+
+    <img
+        class="product-image"
+        [src]="product()?.image">
+
+    <div class="info">
+
+        <div class="infoZ">
+
+             
+
+            <div class="title">
+                {{ product()?.titre }}
+            </div>
+
+            <div class="price">
+                {{ product()?.price | currency:'XAF':'symbol' }}
+            </div>
+
+            <div class="title">
+                {{ product()?.createdAt | date:'dd/MM/yyyy' }}
+            </div>
+
+        </div>
+
+        <a class="btn">
+            Commander
+        </a>
+
+    </div>
+

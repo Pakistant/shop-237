@@ -1,20 +1,18 @@
 
-<div class="categorie">Decouvrez nos vetement</div>
-<div class="product-list">
- 
-  @for (product of list(); track product) {
-    <div class="product">
-      <img class="product-image" [src]="product.image" alt="image">
-      <div class="info">
-        <div class="infoZ">
-           <div class="title">{{ product.categories | json }}</div>
-          <div class="title">{{ product.titre }}</div>
-          <div class="price">prix:{{  product.price| currency : 'XAF': 'symbol' }} </div>
-          <div class="title">{{ product.createdAt | date:'dd/MM/yyyy' }}</div>
-        </div>
-        <a href="#" class="btn">Commander</a>
-      </div>
-    </div>
-  }
+
+<div class="categorie">
+    Découvrez nos vêtements
 </div>
 
+<div class="product-list">
+
+    @for(product of list(); track product.id){
+
+      <div class="product">
+        <app-productitem
+            [product]="product">
+        </app-productitem>
+      </div>
+    }
+
+</div>

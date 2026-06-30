@@ -8,7 +8,7 @@ import { Footer } from './components/footer/footer';
   selector: 'app-root',
   imports: [RouterOutlet,Header,Container,Footer],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('shop-app');

@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component , input } from '@angular/core';
 import { product } from '../../model/product';
+import { CurrencyPipe, DatePipe, JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-productitem',
-  imports: [],
+  imports: [DatePipe, JsonPipe, CurrencyPipe],
   templateUrl: './productitem.html',
-  styleUrl: './productitem.css',
+  styleUrls: ['./productitem.css'],
 })
-export class Productitem {}
+export class Productitem {
+
+  product = input<product>();
+
+   // product = input.required<product>();
+
+
+}
