@@ -1,0 +1,17 @@
+<div class="modal-product-view-overlay"></div>
+   <div class="modal-product-view-container">
+    <div class="modal-product-view-image">
+      <img [src]="product()?.image"
+       [alt]="">
+    </div>
+    <div class="modal-product-view-details">
+      <div>
+        <h2>{{ product()?.titre }}</h2>
+        <p>{{ product()?.description }}</p>
+        <h4>Prix sold : {{ product()?.price }} FCFA</h4>
+        <h4>Prix régulier : {{ product()?.price }} FCFA</h4>
+        <p>Créé le : {{ product()?.createdAt | date:'dd/MM/yyyy' }}</p>
+      </div>
+      <button class="btn btn-close" (click)="onCloseClick()">Fermer</button>
+    </div>
+</div>
