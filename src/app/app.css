@@ -1,0 +1,74 @@
+.favorites-list {
+  margin: 2rem auto 3rem;
+  width: min(1200px, 100%);
+  padding: 1.5rem 1rem;
+  background: #f8faf4;
+  border-radius: 1rem;
+  border: 1px solid rgba(26, 135, 32, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.favorites-list h2 {
+  margin: 0 0 1rem;
+  color: #1a8720;
+  font-size: 1.5rem;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.favorite-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.favorite-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.favorite-card-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.favorite-card-body p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.favorite-price {
+  margin-top: auto;
+  font-weight: 700;
+  color: #1a8720;
+}
+
+@media (max-width: 900px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 660px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, computed, signal } from '@angular/core';
 import { product } from './model/product';
 import { Header } from './components/header/header'
 import { Container } from './components/container/container';
@@ -7,15 +6,22 @@ import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Container,Footer],
+  imports: [Header,Container,Footer],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('shop-app');
-  favoritesCount = signal(0);
-onFavoriteAdded(product: product) {
-this.favoritesCount.update(count => count + 1);
-console.log('Total favoris :', this.favoritesCount());
-}
+  favorites = signal<product[]>([]);
+  favoritesCount = computed(() => this.favorites().length);
+
+  onFavoriteAdded(product: product) {
+    const alreadyFavorite = this.favorites().some(item => item.id === product.id);
+
+    if (alreadyFavorite) {
+      return;
+    }
+
+    this.favorites.update(list => [...list, product]);
+  }
 }

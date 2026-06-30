@@ -1,3 +1,22 @@
 <app-header [favoritesCount]="favoritesCount()" ></app-header>
 <app-container (favoriteAdded)="onFavoriteAdded($event)"></app-container>
+
+@if (favorites().length > 0) {
+  <section class="favorites-list">
+    <h2>Produits favoris</h2>
+    <div class="favorites-grid">
+      @for(product of favorites(); track product.id) {
+        <article class="favorite-card">
+          <img [src]="product.image" [alt]="product.titre" />
+          <div class="favorite-card-body">
+            <h3>{{ product.titre }}</h3>
+            <p>{{ product.description }}</p>
+            <span class="favorite-price">{{ product.price }} FCFA</span>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+}
+
 <app-footer></app-footer>
