@@ -1,5 +1,6 @@
 
 
+<div class="product" (click)="onProductClick()">
     <img
         class="product-image"
         [src]="product()?.image">
@@ -7,8 +8,6 @@
     <div class="info">
 
         <div class="infoZ">
-
-             
 
             <div class="title">
                 {{ product()?.titre }}
@@ -29,4 +28,4 @@
         </a>
 
     </div>
-
+</div>

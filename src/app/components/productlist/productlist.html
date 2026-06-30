@@ -10,9 +10,20 @@
 
       <div class="product">
         <app-productitem
-            [product]="product">
+            [product]="product"
+
+            (displayProductViewModal)="onDisplayProductViewModal($event)" 
+            >  
         </app-productitem>
       </div>
     }
-
+     @if (isDisplayModal() && modalProduct()){
+    <app-modal-product-view
+      [product]="modalProduct()"
+      (close)="onCloseModal()"
+    ></app-modal-product-view>
+    
+    }
+     
 </div>
+
