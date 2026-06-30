@@ -21,6 +21,7 @@
     <app-modal-product-view
       [product]="modalProduct()"
       (close)="onCloseModal()"
+      (favoriteAdded)="onFavoriteAdded($event)"
     ></app-modal-product-view>
     
     }

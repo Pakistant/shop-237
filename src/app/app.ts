@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { product } from './model/product';
 import { Header } from './components/header/header'
 import { Container } from './components/container/container';
 import { Footer } from './components/footer/footer';
@@ -12,4 +13,9 @@ import { Footer } from './components/footer/footer';
 })
 export class App {
   protected readonly title = signal('shop-app');
+  favoritesCount = signal(0);
+onFavoriteAdded(product: product) {
+this.favoritesCount.update(count => count + 1);
+console.log('Total favoris :', this.favoritesCount());
+}
 }

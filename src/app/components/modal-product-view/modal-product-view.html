@@ -12,6 +12,9 @@
         <h4>Prix régulier : {{ product()?.price }} FCFA</h4>
         <p>Créé le : {{ product()?.createdAt | date:'dd/MM/yyyy' }}</p>
       </div>
+      <div class="btn">
+      <button class="btn btn-close" (click)="onAddToFavorites()">❤ Ajouter aux favoris</button>
       <button class="btn btn-close" (click)="onCloseClick()">Fermer</button>
+      </div>
     </div>
 </div>

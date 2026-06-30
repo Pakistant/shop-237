@@ -17,7 +17,14 @@ close = output<void>();
      onCloseClick() {
      this.close.emit();
 }
-
+// NOUVEAU output : ajout aux favoris
+favoriteAdded = output<product>();
+      onAddToFavorites() {
+      const p = this.product();
+        if (p) {
+         this.favoriteAdded.emit(p);
+  }
+}
 
 
 }

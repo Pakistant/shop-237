@@ -41,6 +41,31 @@ object-fit: cover;
   gap: 16px;
 }
 
+@media (max-width: 660px) {
+  .modal-product-view-container {
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    max-height: 90vh;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .modal-product-view-image {
+    width: 100%;
+    min-height: 220px;
+  }
+
+  .modal-product-view-image img {
+    height: 100%;
+  }
+
+  .modal-product-view-details {
+    gap: 12px;
+  }
+}
+
+
 .modal-product-view-details .btn-close {
   align-self: flex-start;
   padding: 0.6rem 1.2rem;
@@ -49,4 +74,8 @@ object-fit: cover;
   background-color: #1a8720;
   color: #fff;
   cursor: pointer;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.css'],
 })
 export class Header {
+
+  favoritesCount = input(0);
+
    links = [
   { label: 'Home',      href: '#home' },
   { label: 'Product',         href: '#product' },

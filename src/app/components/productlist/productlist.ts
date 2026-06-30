@@ -1,4 +1,4 @@
-import { Component,signal } from '@angular/core';
+import { Component,signal,output } from '@angular/core';
 import { product } from '../../model/product';
 
 import { Productitem } from '../productitem/productitem';
@@ -124,6 +124,13 @@ export class Productlist {
             this.isDisplayModal.set(false);
             this.modalProduct.set(undefined);
           }
+          // NOUVEAU output : retransmet vers App
+           favoriteAdded = output<product>();
+          // Méthode appelée quand le modal ajoute aux favoris
+          onFavoriteAdded(product: product) {
+           console.log('Favori ajouté :', product.titre);
+           this.favoriteAdded.emit(product);
+}
 
 }
 
