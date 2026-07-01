@@ -1,7 +1,9 @@
 .favorites-list {
   margin: 2rem auto 3rem;
   width: min(1200px, 100%);
-  padding: 1.5rem 1rem;
+  padding-top:1rem;
+  
+  
   background: #f8faf4;
   border-radius: 1rem;
   border: 1px solid rgba(26, 135, 32, 0.15);
@@ -10,6 +12,7 @@
 
 .favorites-list h2 {
   margin: 0 0 1rem;
+  padding-left: 1rem;
   color: #1a8720;
   font-size: 1.5rem;
 }
@@ -31,8 +34,9 @@
 
 .favorite-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .favorite-card-body {
